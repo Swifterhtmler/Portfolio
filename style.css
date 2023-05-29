@@ -173,3 +173,13 @@ footer p {
 
 
 
+.animated-element {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.animated-element.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
