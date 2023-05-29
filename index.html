@@ -164,13 +164,7 @@
 <img src="763A61F6-FC81-446D-BC86-36632F95AD44.png" alt="picture of app ui" height="210", width="100">
 </div>
    
-   
-   
-   
-    
-    
-    <!-- Add more project divs as needed -->
-  
+
 
 
 </section>
@@ -207,9 +201,15 @@
  </div>
 
 <br>
+<div class="project animated-element"></div>
 
 <button id="revealButton">Work experiance</button>
+
+
 <p id="hiddenText" style="display: none;">I have work experiance in a two diffrent pharmacies on Tampere region and i have also worked on camera shop two times</p>
+
+
+</div>
 <br>
 <script>
     const revealButton = document.getElementById('revealButton');
@@ -223,6 +223,12 @@
       }
     });
 
+    document.getElementById("revealButton").addEventListener("click", function() {
+      var hiddenText = document.getElementById("hiddenText");
+      hiddenText.classList.toggle("open");
+      hiddenText.style.display = hiddenText.classList.contains("open") ? "block" : "none";
+    });
+    
 </script>
 
 <script>
@@ -260,6 +266,9 @@
   <footer>
     <p>&copy; 2023 Riku Kuisma. All rights reserved.</p>
   </footer>
+
+
+
 </body>
 
 </html>
