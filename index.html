@@ -12,7 +12,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home">home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -23,6 +23,7 @@
   
   <section id="home">
     <h1>Welcome to My Portfolio</h1>
+    <!-- comment1 think about removingbeginner software developer text-->
     <p>Hi, I'm Riku Kuisma. I'm a beginner software developer and this is my portfolio website.</p>
   </section>
 
@@ -214,7 +215,7 @@
 <button id="revealButton">Work experiance</button>
 
 
-<p id="hiddenText" style="display: none;">I have work experiance in a two diffrent pharmacies on Tampere region and i have also worked on camera shop two times</p>
+
 
 
 </div>
@@ -233,8 +234,11 @@
 
     document.getElementById("revealButton").addEventListener("click", function() {
       var hiddenText = document.getElementById("hiddenText");
+      var  photo = document.getElementById("photo") 
       hiddenText.classList.toggle("open");
+      photo.classList.toggle("open");
       hiddenText.style.display = hiddenText.classList.contains("open") ? "block" : "none";
+      photo.style.display = photo.classList.contains("open") ? "block" : "none";
     });
     
 </script>
@@ -259,9 +263,19 @@
 
 <br>
 
+<div id="container">
+  <section style="display: flex; align-items: center;">
+             <!-- comment the real name of the photo is the untitled 14.jpg change it if you want-->
+    <img id="photo" src="Untitld 14.jpg" alt="picture of me" width="250" height="250" style="border-radius: 50px; padding-left: 20px; display: none;">
+    <h4 id="hiddenText" style="display: none;">I have work experience in two different pharmacies in the Tampere region, and I have also worked in a camera shop twice.</h4>
+  </section>
+</div>
 
-  
 
+
+
+<br>
+<br>
   <section id="contact">
     <h2>Contact Me</h2>
     <p>You can reach me at <a href="mailto:rikukuisma@icloud.com">rikukuisma@icloud.com</a> or through the following social media platforms:</p>
@@ -270,6 +284,7 @@
       <li><a href="https://github.com/Swifterhtmler">GitHub</a></li>
     </ul>
   </section>
+
 
   <footer>
     <p>&copy; 2023 Riku Kuisma. All rights reserved.</p>
@@ -280,3 +295,24 @@
 </body>
 
 </html>
+
+
+<div id="container">
+
+  <section>
+  <img id="photo" style="display: none;" src="Untitled 14.jpg" alt="picture of me" width="250, heig
+  250">
+
+   <h4 id="hiddenText" style="display: none;">I have work experiance in a two diffrent pharmacies on Tampere region and i have also worked on camera shop two times</h4>
+
+<style>
+   #photo {
+    border-radius: 30px;
+    padding-right: 20px;
+   }
+
+</style>
+
+
+</section>
+</div>

@@ -193,3 +193,5 @@ footer p {
 .open {
   height: auto;
 }
+
+a:visited {  color: grey;}a:hover {  color: black;}a:active {  color: cyan;}
