@@ -2,5 +2,5 @@
 
 # My personal portfolio website 
 
-# created with css html and Javascript
+# created with css and html
 
