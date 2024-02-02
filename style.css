@@ -5,11 +5,20 @@ ul {
   padding: 0;
 }
 
+#footer {
+  background-color:  rgb(41, 44, 52);
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  margin: 30px 0 0 -10px;
+}
+
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 
 header {
@@ -56,7 +65,7 @@ h3 {
     border-radius: 8px;
   }
 
-
+/*  
 
 footer {
   background-color:  rgb(41, 44, 52);
@@ -64,6 +73,7 @@ footer {
   padding: 15px;
   text-align: center;
 }
+ */
 
 /* Media queries for responsive design */
 @media screen and (max-width: 600px) {
@@ -169,6 +179,8 @@ footer {
 
 footer p {
   font-size: 14px;
+  width: auto;
+  max-width: max-content;
 }
 
 
