@@ -5,13 +5,7 @@ ul {
   padding: 0;
 }
 
-#footer {
-  background-color:  rgb(41, 44, 52);
-  color: #fff;
-  padding: 15px;
-  width: 100%;
-  margin: 30px 0 0 -10px;
-}
+
 
 /* Global styles */
 body {
@@ -19,6 +13,8 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -177,12 +173,20 @@ footer {
   font-size: 16px;
 }
 
+
 footer p {
   font-size: 14px;
   width: auto;
   max-width: max-content;
 }
 
+ 
+#footer {
+  background-color:  rgb(41, 44, 52);
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+}
 
 
 .animated-element {
@@ -205,5 +209,9 @@ footer p {
 .open {
   height: auto;
 }
+
+
+
+
 
 a:visited {  color: white;}a:hover {  color: rgba(197, 145, 178, 1.0);}a:active {  color: whitesmoke;}
