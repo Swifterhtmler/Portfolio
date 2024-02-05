@@ -230,6 +230,26 @@ margin-left: 10px;
   margin-left: 5px;
 }
 
+
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  #technologies {
+    grid-template-columns: auto auto;
+  }
+
+  .image1, .image2, .image3 {
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #technologies {
+    grid-template-columns: auto;
+  }
+}
+
+
 .language {
   background-color: rgba(187, 209, 207, 0.8);
   padding: 20px;
