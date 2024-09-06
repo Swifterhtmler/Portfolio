@@ -217,6 +217,7 @@ footer p {
   column-gap: 20px;
   row-gap: 20px;
   max-width: 100%;
+  overflow-x: hidden;
   margin: 0 auto;
 }
 
@@ -265,6 +266,7 @@ margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 5px 5px 8px lightgray;
 }
 
 
