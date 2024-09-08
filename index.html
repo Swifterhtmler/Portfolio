@@ -49,15 +49,130 @@
 
 
   <section id="home">
-    <h1 style="font-family: 'emboss', sans-serif; color: Gray; text-shadow: 2px 2px 2px black " class="font-effect-emboss" id="welcome">Welcome to My Portfolio</h1>
-    <!-- comment1 think about removingbeginner software developer text-->
-    <p>Hi, I'm Riku Kuisma. I'm a self-taught beginner software developer and this is my portfolio.</p>
-  </section>
 
-  <div data-aos="fade-in">
+    <div class='console-container'>
+        <span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;</div>
+    </div>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+        .hidden {
+            opacity: 0;
+        }
+
+        .console-container {
+            font-family: Khula;
+            font-size: 4em;
+            text-align: center;
+            height: 200px;
+            width: 600px;
+            display: block;
+            position: relative; /* Changed from absolute to avoid overlap */
+            color: white;
+            margin: 50px auto; /* Adjust margin for spacing */
+        }
+
+        .console-underscore {
+            display: inline-block;
+            position: relative;
+            top: -0.14em;
+            left: 10px;
+            color: black;
+        }
+    </style>
+
+    <script>
+        // Function([string1, string2],target id,[color1,color2])
+        setTimeout(function() {
+            consoleText(['Hello World.', 'Welcome', 'To my portfolio'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
+        }, 500); // Delays the typing effect by 500ms
+
+        function consoleText(words, id, colors) {
+            if (colors === undefined) colors = ['#fff'];
+            var visible = true;
+            var con = document.getElementById('console');
+            var letterCount = 1;
+            var x = 1;
+            var waiting = false;
+            var target = document.getElementById(id);
+            target.setAttribute('style', 'color:' + colors[0]);
+
+            window.setInterval(function() {
+                if (letterCount === 0 && waiting === false) {
+                    waiting = true;
+                    target.innerHTML = words[0].substring(0, letterCount);
+                    window.setTimeout(function() {
+                        var usedColor = colors.shift();
+                        colors.push(usedColor);
+                        var usedWord = words.shift();
+                        words.push(usedWord);
+                        x = 1;
+                        target.setAttribute('style', 'color:' + colors[0]);
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000);
+                } else if (letterCount === words[0].length + 1 && waiting === false) {
+                    waiting = true;
+                    window.setTimeout(function() {
+                        x = -1;
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000);
+                } else if (waiting === false) {
+                    target.innerHTML = words[0].substring(0, letterCount);
+                    letterCount += x;
+                }
+            }, 120);
+
+            window.setInterval(function() {
+                if (visible === true) {
+                    con.className = 'console-underscore hidden';
+                    visible = false;
+                } else {
+                    con.className = 'console-underscore';
+                    visible = true;
+                }
+            }, 400);
+        }
+    </script>
+
+    <p id="I-am">Hi, I'm Riku Kuisma. I'm a self-taught beginner software developer and this is my portfolio.</p>
+
+
+    <style>
+
+      #I-am {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #333;
+        animation: fadeIn 1s ease-in-out 2s forwards;
+        opacity: 0;
+        color: white;
+      }  
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+    </style>
+
+</section>
+
+  
+
+  
+
+  <div class="project animated-element">
   <section id="about">
-    <h2 style="text-align: center;">About Me</h2>
-    <p>I'm 18 years old intrested in software development and technology in general. I enjoy learning about new technologies and their applications to the societies. Helping people with their IT problems is important to me. I don't fear getting my hands dirty and going for that extra mile when it comes for customer satisfaction. I enjoy problem solving and work efficiently alone or in a team. </p>
+    <h2 style="text-align: center; color: white">About Me</h2>
+    <p style="color: white;">I'm 18 years old intrested in software development and technology in general. I enjoy learning about new technologies and their applications to the societies. Helping people with their IT problems is important to me. I don't fear getting my hands dirty and going for that extra mile when it comes for customer satisfaction. I enjoy problem solving and work efficiently alone or in a team. </p>
   </section>
   
 
