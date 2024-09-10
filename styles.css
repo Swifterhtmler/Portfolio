@@ -215,74 +215,70 @@ footer p {
 
 
 #technologies {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 30px;
-    row-gap: 20px;
-    width: 95vw; /* Ensures the grid spans the full viewport width */
-    margin: 0; /* Removes any margin around the grid */
-    padding: 20px 0; /* Add vertical padding only */
-    overflow-x: hidden;
-    margin: 0 auto;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.language {
+  background-color: var(--card-col);
+  padding: 20px;
+  font-size: 18px;
+  color: var(--text-col);
+  text-align: center;
+  border-radius: 10px;
+  border: #333 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 3px lightgray;
+  transition: box-shadow 0.3s ease;
+}
+
+.language:hover {
+  box-shadow: 0 0 8px 6px lightgray;
+}
+
+.language img {
+  max-width: 48px;
+  height: auto;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  #technologies {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
-  .image1 {
-  margin-left: 10px;
-  }
-  
-  .image2 {
-    margin-left: -10px;
-  }
-  
-  .image3 {
-    margin-left: 5px;
-  }
-  
-  .image4 {
-    margin-left: 15px;
-  }
-  
-  
-  /* Media Queries for responsiveness */
-  @media only screen and (max-width: 768px) {
-    #technologies {
-      grid-template-columns: auto auto;
-    }
-  
-    .image1, .image2, .image3 {
-      margin-left: 0; /* Reset margin for smaller screens */
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    #technologies {
-      grid-template-columns: auto;
-    }
-  }
-  
-  
+
   .language {
-    background-color: var(--card-col);
-    padding: 20px;
-    font-size: 30px;
-    color: var(--text-col);
-    text-align: center;
-    border-radius: 10px;
-    border: #333 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 5px 3px lightgray;
-  }
-  
-  
-  .language:hover {
-    box-shadow: 0 0 8px 6px lightgray;
+    font-size: 16px;
   }
 
+  .language img {
+    max-width: 40px;
+  }
+}
 
+@media only screen and (max-width: 480px) {
+  #technologies {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 
+  .language {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .language img {
+    max-width: 32px;
+  }
+}
 
 
 
