@@ -317,7 +317,6 @@ footer p {
 }
 
 #h2 {
-    color: blue;
     text-shadow: 0 0 8px rgba(66, 170, 255, 0.7), 0 0 15px rgba(127, 197, 255, 0.9);
     background: linear-gradient(45deg, #a4cce9, #1a7ac8);
     -webkit-background-clip: text;
