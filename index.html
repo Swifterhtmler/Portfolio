@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <meta name="description" content="Portfolio of Riku Kuisma, a self-taught software developer showcasing projects and skills in web development and mobile">
+    <meta name="keywords" content="software developer, web development, portfolio, Riku Kuisma, programming, coding, web design">
+    <meta name="author" content="Riku Kuisma">
+    <title>Riku Kuisma | Software Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=emboss">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,7 +34,8 @@
         <div class='console-underscore' id='console'>&#95;</div>
     </div>
 
-    <style>
+
+    <!-- <style>
         @import url(https://fonts.googleapis.com/css?family=Khula:700);
 
         .hidden {
@@ -57,7 +61,71 @@
             left: 10px;
             color: rgb(237, 230, 230);
         }
-    </style>
+    </style> -->
+
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .console-container {
+      font-family: Khula;
+      font-size: 4em;
+      text-align: center;
+      height: 200px;
+      width: 100%; /* Changed from fixed 600px to 100% */
+      max-width: 600px; /* Added max-width to maintain original size on larger screens */
+      display: block;
+      position: relative;
+      color: white;
+      margin: 50px auto;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      .console-container {
+        font-size: 3.0em; 
+        height: 150px;
+        margin: 30px auto; 
+      }
+    }
+
+ 
+    @media (max-width: 480px) {
+      .console-container {
+        font-size: 2em; 
+        height: 120px;
+        margin: 20px auto;
+      }
+    }
+
+    .console-underscore {
+      display: inline-block;
+      position: relative;
+      top: -0.14em;
+      left: 10px;
+      color: rgb(237, 230, 230);
+    }
+
+    #I-am {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5em;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: white;
+      animation: fadeIn 1s ease-in-out 2s forwards;
+      opacity: 0;
+      padding: 0 20px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 
     <script>
         // Function([string1, string2],target id,[color1,color2])
